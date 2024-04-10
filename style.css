@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./images/background1920x1080.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.controls {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 5px;
+    color: white;
+    font: 30px Bangers;
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
+    transition: 0.3s ease;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: #7a2c8a;
+    box-shadow: 4px 4px 4px black;
+    text-shadow: 4px 4px 4px black;
+}
+.assets {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    #canvas {
+        background-image: url("./images/background1080x1920.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
